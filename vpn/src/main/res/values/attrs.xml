@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+    <attr name="mwhWaves" format="string|enum">
+        <enum name="MultiWave" value="-1"/>
+        <enum name="PairWave" value="-2"/>
+    </attr>
+  <attr name="colorSurface" format="string"/>
+    <attr name="mwhShape" format="enum">
+        <enum name="Rect" value="0"/>
+        <enum name="RoundRect" value="1"/>
+        <enum name="Oval" value="2"/>
+    </attr>
+    
+    
+	<declare-styleable name="DataGraph">
+		<attr name="dg_colorDown" format="color" />
+		<attr name="dg_colorUp" format="color" />
+		<attr name="dg_colorText" format="color" />
+	</declare-styleable>
+    
+   <declare-styleable name="Rotate3dAnimation">
+        <attr name="rollType" format="enum">
+            <enum name="x" value="0"/>
+            <enum name="y" value="1"/>
+            <enum name="z" value="2"/>
+        </attr>
+        <attr name="fromDeg" format="float" />
+        <attr name="toDeg" format="float" />
+        <attr name="pivotX" format="fraction"/>
+        <attr name="pivotY" format="fraction" />
+    </declare-styleable>
+    <declare-styleable name="MultiWaveHeader">
+        <attr name="mwhWaveHeight" format="dimension"/>
+        <attr name="mwhStartColor" format="color"/>
+        <attr name="mwhCloseColor" format="color"/>
+        <attr name="mwhIsRunning" format="boolean"/>
+        <attr name="mwhEnableFullScreen" format="boolean"/>
+        <attr name="mwhColorAlpha" format="fraction|float"/>
+        <attr name="mwhProgress" format="fraction|float"/>
+        <attr name="mwhVelocity" format="fraction|float"/>
+        <attr name="mwhGradientAngle" format="integer"/>
+        <attr name="mwhCornerRadius" format="dimension"/>
+        <attr name="mwhWaves"/>
+        <attr name="mwhShape"/>
+    </declare-styleable>
+
+    <!--<declare-styleable name="Wave">-->
+        <!--<attr name="mwOffsetX" format="dimension"/>-->
+        <!--<attr name="mwOffsetY" format="dimension"/>-->
+        <!--<attr name="mwVelocity" format="dimension"/>-->
+        <!--<attr name="mwWaveHeight" format="dimension"/>-->
+        <!--<attr name="mwScaleX" format="float"/>-->
+        <!--<attr name="mwScaleY" format="float"/>-->
+    <!--</declare-styleable>-->
+    
+        <!-- Location of the SVG document. -->
+        
+    
+      
+     <declare-styleable name="SVGImageView">
+     
+        <!-- Location of the SVG document. -->
+        <attr name="svg" format="reference|string"/>
+        <attr name="css" format="string"/>
+    </declare-styleable>
+    <attr name="updatesContinuously" format="boolean" />
+    <attr name="preferenceCategoryStyle" format="reference" />
+     
+    <attr name="preferenceCategoryTitleTextAppearance" format="reference" />
+    <attr name="preferenceCategoryTitleTextColor" format="reference|color" />
+</resources>
+
+
+
+

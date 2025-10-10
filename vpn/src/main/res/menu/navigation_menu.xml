@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group android:id="@+id/grupo0"
+    android:checkableBehavior="single">
+    	<group android:id="@+id/grupo7">
+        
+        <item
+       	android:id="@+id/pogs"
+			android:icon="@drawable/fs"
+        	android:title="Release Notes"/>
+            
+        <item
+       	android:id="@+id/pogs1"
+			android:icon="@drawable/c6"
+        	android:title="Announcement"/>
+            
+             </group>
+             
+		
+	</group>
+    
+    	<group android:id="@+id/grupo76">
+        
+        
+            
+            
+            	<item
+       	android:id="@+id/pogse"
+			android:icon="@drawable/ic_webhook"
+        	android:title="IP Hunter"/>
+            
+            	<item
+       	android:id="@+id/configUpdate"
+			android:icon="@drawable/ic_file_download"
+        	android:title="Update Resources"/>
+            
+            	
+            
+            </group>
+            
+            	<group android:id="@+id/grupo86">
+                <item android:id="@+id/miSettings"
+        	android:icon="@drawable/ic_settings"
+        	android:title="@string/settings"/>
+                </group>
+            
+            	<group android:id="@+id/grupo786">
+                
+                	<item android:id="@+id/add"
+        	android:icon="@drawable/ic_shield_edit_outline"
+        	android:title="Custom Server"/>
+            
+            <item android:id="@+id/add1"
+        	android:icon="@drawable/ic_custom_tweaks"
+        	android:title="Custom Tweaks"/>
+            
+            
+                
+	
+	</group>
+	<group android:id="@+id/grupo2">
+    
+     <item android:id="@+id/item7"
+			android:icon="@drawable/messenger"
+			android:title="Contact Us"/>
+        
+		
+		<item android:id="@+id/item5"
+			android:icon="@drawable/ic_fb"
+			android:title="Facebook Group"/>
+            
+                </group>
+            
+            	<group android:id="@+id/grupo76">
+       <item
+  android:id="@+id/hostshare"
+  android:icon="@drawable/ic_wifi_tethering_black_24dp"
+  android:title="Hotspot Tether"/>
+  
+  <item
+		android:id="@+id/submit"
+		android:title="Submit Payload"
+		android:icon="@drawable/gmi_code_smartphone"/>
+      
+    </group>
+	
+</menu>

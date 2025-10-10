@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="10dp">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:textSize="17.0dip"
+            android:layout_marginLeft="25.0dip"
+            android:layout_marginTop="30.0dip"
+			android:layout_width="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+			android:layout_height="wrap_content"
+			android:text="Custom Payload"/>
+
+	</LinearLayout>
+    
+     <View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?android:dividerVertical"/>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:hint="Name">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:id="@+id/pName"
+				android:layout_height="wrap_content"/>
+
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="5.0dip"
+		android:layout_weight="1.0"
+        android:id="@+id/pLay"
+		app:boxStrokeColor="@color/blue">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/cPayload"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="Payload"/>
+
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:layout_width="70.0dip"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5.0dip"
+		android:layout_weight="1.0"
+		app:boxStrokeColor="@color/blue">
+
+		<ImageView
+			android:background="@drawable/ex"
+			android:layout_width="30.0dip"
+            android:id="@+id/generate"
+			android:layout_height="30.0dip"
+			android:layout_marginTop="17.0dip"
+			android:layout_marginRight="10.0dip"
+			android:src="@drawable/g8"
+			android:tint="@color/blue"/>
+
+	</com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
+
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+            android:id="@+id/sLay"
+			android:hint="SNI ex: (m.facebook.com">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:id="@+id/sni"
+				android:layout_height="wrap_content"/>
+
+		</com.google.android.material.textfield.TextInputLayout>
+
+		
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+                android:id="@+id/dLay"
+				android:hint="DNS Bughost">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:id="@+id/dns"
+					android:layout_height="wrap_content"/>
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+        
+        	<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Use Default Proxy"
+			android:id="@+id/useWeb"/>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+                android:id="@+id/phLay"
+				android:hint="Proxy Host">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:id="@+id/pstt"
+					android:layout_height="wrap_content"/>
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+                android:id="@+id/prLay"
+				android:hint="Proxy Port">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:id="@+id/prtt"
+					android:layout_height="wrap_content"/>
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+		
+		<AutoCompleteTextView
+			android:layout_width="match_parent"
+			android:inputType="text"
+			android:layout_height="wrap_content"
+			android:ems="10"
+            android:visibility="gone"
+			android:id="@+id/pInfo"
+			android:hint="Payload Info"/>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:paddingTop="10dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="TunnelTypes"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:layout_gravity="center"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+        
+        
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="SSH/PROXY"
+				android:id="@+id/useInject"
+				android:textSize="10.0dip"/>
+
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="SSH/SSL"
+				android:fontFamily="sans-serif-smallcaps"
+				android:id="@+id/useSSL"
+				android:textSize="10.0dip"/>
+
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="DIRECT"
+				android:id="@+id/useDirect"
+				android:textSize="10.0dip"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="SSL/PAYLOAD"
+				android:id="@+id/useWSpayload"
+				android:textSize="10.0dip"/>
+
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="SSL+PAY+RP"
+				android:id="@+id/useHatok"
+				android:textSize="10.0dip"/>
+                
+                
+           <RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="SlowDNS"
+				android:id="@+id/useSlow"
+				android:textSize="10.0dip"/>
+
+		</LinearLayout>
+        
+
+
+
+	</LinearLayout>
+
+</ScrollView>
+

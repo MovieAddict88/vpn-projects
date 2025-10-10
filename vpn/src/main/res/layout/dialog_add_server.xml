@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+    
+    
+            	<ScrollView
+
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+        
+        	<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:textSize="17.0dip"
+            android:layout_marginLeft="25.0dip"
+            android:layout_marginTop="30.0dip"
+			android:layout_width="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+			android:layout_height="wrap_content"
+			android:text="CUSTOM SERVER"/>
+
+	</LinearLayout>
+    
+     <View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?android:dividerVertical"/>
+        
+
+	<EditText
+		android:visibility="gone"
+		android:id="@+id/smess"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:hint="FLAG (e.g. ph)"
+		android:singleLine="true"
+		android:maxLength="2"/>
+
+	<EditText
+		android:visibility="gone"
+		android:id="@+id/sInfo"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:hint="FLAG (e.g. ph)"
+		android:singleLine="true"
+		android:maxLength="2"/>
+
+	<EditText
+		android:visibility="gone"
+		android:id="@+id/lPort"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:hint="FLAG (e.g. ph)"
+		android:singleLine="true"
+		android:maxLength="2"/>
+        
+ 	<com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+            android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+			android:hint="Server Name">
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/sName"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		
+		android:singleLine="true"/>
+        
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        	<com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+            android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+			android:hint="FLAG (e.g. ph)">
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/sFlag"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		
+		android:singleLine="true"
+		android:maxLength="2"/>
+        
+         </com.google.android.material.textfield.TextInputLayout>
+         
+         	<com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+            android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+			android:hint="Host | IP">
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/sHost"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		
+		android:singleLine="true"/>
+        
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        
+                <com.google.android.material.textview.MaterialTextView 
+            android:textStyle="bold" 
+            android:layout_gravity="center_horizontal" 
+            android:id="@+id/tv_title_dnstt" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/label_sshport" 
+            app:layout_constraintEnd_toEndOf="parent" 
+            app:layout_constraintStart_toStartOf="parent" 
+            app:layout_constraintTop_toTopOf="parent" 
+            android:layout_marginTop="10dp"/>
+
+<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+	    	android:layout_marginRight="10.0dip"
+			android:layout_marginTop="8dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+                android:layout_marginRight="5.0dip"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1.0">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:hint="SSH Port (22)">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:id="@+id/sPort"
+						android:inputType="number"
+						android:layout_height="wrap_content"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+                android:layout_marginLeft="5.0dip"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1.0">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:hint="SSL Port (443)">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:id="@+id/sslPort"
+						android:inputType="number"
+						android:layout_height="wrap_content"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+        
+        
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+	    	android:layout_marginRight="10.0dip"
+			android:layout_marginTop="8dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+                android:layout_marginRight="5.0dip"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1.0">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:hint="Proxy Port (8080)">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:id="@+id/rPort"
+						android:inputType="number"
+						android:layout_height="wrap_content"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+                android:layout_marginLeft="5.0dip"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1.0">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:hint="SlowDnS Port (2222)">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:id="@+id/Sfrep"
+						android:inputType="number"
+						android:layout_height="wrap_content"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+        
+        
+        <com.google.android.material.textview.MaterialTextView 
+            android:textStyle="bold" 
+            android:layout_gravity="center_horizontal" 
+            android:id="@+id/tv_title_dnstt" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/label_dnstt" 
+            app:layout_constraintEnd_toEndOf="parent" 
+            app:layout_constraintStart_toStartOf="parent" 
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp" />
+    
+  <com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+            android:layout_marginLeft="10.0dip"
+	    	android:layout_marginRight="10.0dip"
+			android:hint="Nameserver">
+
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/snameserver"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:singleLine="true"/>
+        
+  </com.google.android.material.textfield.TextInputLayout>
+  
+  
+  <com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+            android:layout_marginLeft="10.0dip"
+	    	android:layout_marginRight="10.0dip"
+			android:hint="Public Key">
+
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/chavekey"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:singleLine="true"/>
+        
+  </com.google.android.material.textfield.TextInputLayout>
+  
+  
+   
+        <com.google.android.material.textview.MaterialTextView 
+            android:textStyle="bold" 
+            android:layout_gravity="center_horizontal" 
+            android:id="@+id/tv_title_dnstt" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/label_acc" 
+            app:layout_constraintEnd_toEndOf="parent" 
+            app:layout_constraintStart_toStartOf="parent" 
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp" />
+    
+
+
+       <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+	    	android:layout_marginRight="10.0dip">
+			
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+                android:layout_marginRight="5.0dip"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1.0">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:hint="Username">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:id="@+id/user"
+						android:layout_height="wrap_content"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+                android:layout_marginLeft="5.0dip"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1.0">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:hint="Password">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:id="@+id/pass"
+						android:layout_height="wrap_content"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+       
+       	</LinearLayout>
+       	</ScrollView>
+
+</LinearLayout>
+

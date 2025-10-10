@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_vertical"
+	android:paddingLeft="5dip"
+	android:padding="5dip">
+
+	<RelativeLayout
+		android:id="@+id/haha"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:id="@+id/spinner_item_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left|center"
+			android:layout_marginLeft="10dp">
+
+			<ImageView
+				android:layout_width="40.0dip"
+				android:layout_height="40.0dip"
+				android:id="@+id/itemImage"/>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dip">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Text"
+                    android:textColor="@color/colorOpposite"
+					android:id="@+id/itemName"
+					android:ellipsize="marquee"
+					android:scrollHorizontally="true"
+					android:singleLine="true"
+					android:marqueeRepeatLimit="marquee_forever"
+					android:gravity="center|left"
+					android:textSize="11.0dip"
+					android:textStyle="bold"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ellipsize="marquee"
+					android:scrollHorizontally="true"
+					android:marqueeRepeatLimit="marquee_forever"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textSize="8.0dip"
+					android:singleLine="true"
+					android:gravity="center|left"
+					android:id="@+id/info"
+                   android:textColor="@color/colorOpposite"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="right">
+
+				<RelativeLayout
+					android:layout_width="60.0dip"
+					android:layout_height="20dp"
+					android:gravity="center"
+					android:layout_gravity="right|center"
+					android:layout_alignParentRight="true"
+					android:layout_centerInParent="true"
+					android:layout_marginRight="5dp">
+
+
+				</RelativeLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</RelativeLayout>
+

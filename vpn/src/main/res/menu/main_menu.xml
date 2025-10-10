@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/CopyLogs"
+        android:icon="@drawable/ic_settings"
+		app:showAsAction="always"
+        android:title="Settings">
+    </item>
+    <group android:id="@+id/grupo1">
+    
+    
+    	<item android:id="@+id/pogso"
+        	android:icon="@drawable/ic_settings"
+        	android:title="Server Status"/>
+            
+			<item android:id="@+id/miSettings"
+        	android:icon="@drawable/ic_settings"
+        	android:title="Offline Update"/>
+            
+    	<item android:id="@+id/miSettings1"
+        	android:icon="@drawable/ic_settings"
+        	android:title="Exit"/>
+            
+	</group>
+
+</menu>
