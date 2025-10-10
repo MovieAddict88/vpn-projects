@@ -144,11 +144,10 @@ public class ConfigUtil {
             File file = new File(context.getFilesDir(), "Config.json");
             if (file.exists()) {
                 String json_file = readStream(new FileInputStream(file));
-                String json = AESCrypt.decrypt(PASSWORD, json_file);
-                return new JSONObject(json);
+                return new JSONObject(json_file);
             } else {
                 InputStream inputStream = context.getAssets().open("config/config.json");
-                String json = AESCrypt.decrypt(PASSWORD, readStream(inputStream));
+                String json = readStream(inputStream);
                 return new JSONObject(json);
             }
         } catch (Exception e) {
