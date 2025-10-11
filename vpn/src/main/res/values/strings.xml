@@ -192,6 +192,7 @@
 <string name="payload_details_msg">Currently, the following keywords are supported in the connection text: [method] [host_port] [ssh] [host] [port] [protocol] [crlf] [cr] [lf] [lfcr] [ua] [random = *;] [rotate = *;] [split] [delay_split]</string>
 <string name="project_home">Developer Home:</string>
 <string name="project_urls">http://t.me/SlipkProjects</string>
+<string name="updater_url" translatable="false">https://your-domain.example.com/Updater</string>
 <string name="third_party_software">Software de Terceiros</string>
 <string name="jsocks_version">JSocks v1.0.1: https://jsocks.sourceforge.net</string>
 <string name="trileadssh2_version">Trilead SSH-2 Build 217: https://github.com/jenkinsci/trilead-ssh2</string>

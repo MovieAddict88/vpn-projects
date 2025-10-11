@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import com.socksxvpn.ph.R;
 
 /**
  * Created by: KervzCodes
@@ -22,7 +23,15 @@ public class vagol extends AsyncTask<String, String, String> {
     private OnUpdateListener listener;
     private ProgressDialog progressDialog;
     private boolean isOnCreate;
-	private final static String Updater = new String(new byte[]{104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,97,110,103,101,108,111,108,97,99,97,98,97,47,97,110,103,101,108,111,108,97,99,97,98,97,47,109,97,105,110,47,85,112,100,97,116,101,114});
+    private final static String DEFAULT_UPDATER_URL = "https://raw.githubusercontent.com/angelolacaba/angelolacaba/main/Updater";
+
+    private String getUpdaterUrl() {
+        try {
+            String fromString = context.getString(R.string.updater_url);
+            if (fromString != null && fromString.length() > 0) return fromString;
+        } catch (Exception ignored) {}
+        return DEFAULT_UPDATER_URL;
+    }
 
     public vagol(Context context, OnUpdateListener listener) {
         this.context = context;
@@ -42,7 +51,7 @@ public class vagol extends AsyncTask<String, String, String> {
     protected String doInBackground(String... strings) {
         try {
             StringBuilder sb = new StringBuilder();
-            URL url = new URL(Updater);
+            URL url = new URL(getUpdaterUrl());
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
