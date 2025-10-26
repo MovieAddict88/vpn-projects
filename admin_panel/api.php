@@ -33,6 +33,7 @@ if($stmt = $pdo->prepare($sql)){
 
 // Combine into the final JSON structure
 $output = [
+    'success' => true,
     'Version' => $settings['Version'],
     'ReleaseNotes' => $settings['ReleaseNotes'],
     'ReleaseNotes1' => $settings['ReleaseNotes1'],
