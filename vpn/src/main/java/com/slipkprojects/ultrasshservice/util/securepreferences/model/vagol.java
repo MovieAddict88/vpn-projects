@@ -22,7 +22,8 @@ public class vagol extends AsyncTask<String, String, String> {
     private OnUpdateListener listener;
     private ProgressDialog progressDialog;
     private boolean isOnCreate;
-	private final static String Updater = new String(new byte[]{104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,97,110,103,101,108,111,108,97,99,97,98,97,47,97,110,103,101,108,111,108,97,99,97,98,97,47,109,97,105,110,47,85,112,100,97,116,101,114});
+	// IMPORTANT: REPLACE THIS URL WITH THE ACTUAL URL OF YOUR ADMIN PANEL API
+	private final static String Updater = "https://your-domain.com/admin_panel/api.php";
 
     public vagol(Context context, OnUpdateListener listener) {
         this.context = context;
@@ -44,7 +45,12 @@ public class vagol extends AsyncTask<String, String, String> {
             StringBuilder sb = new StringBuilder();
             URL url = new URL(Updater);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
+            conn.setRequestMethod("POST");
+            conn.setDoOutput(true);
+
+            String postData = "pass=password";
+            conn.getOutputStream().write(postData.getBytes("UTF-8"));
+
             conn.connect();
 
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
