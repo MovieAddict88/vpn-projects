@@ -40,25 +40,7 @@ $output = [
     'Networks' => $networks,
 ];
 
-require_once 'AESCrypt.php';
-
-$password = $_POST['pass'] ?? '';
-
-if ($password !== 'password') {
-    header('HTTP/1.1 401 Unauthorized');
-    echo json_encode(['error' => 'Unauthorized']);
-    exit;
-}
-
-$jsonOutput = json_encode($output);
-
-try {
-    $encrypted = AESCrypt::encrypt($password, $jsonOutput);
-    header('Content-Type: text/plain');
-    echo $encrypted;
-} catch (Exception $e) {
-    header('HTTP/1.1 500 Internal Server Error');
-    echo json_encode(['error' => 'Encryption failed: ' . $e->getMessage()]);
-}
+header('Content-Type: application/json');
+echo json_encode($output);
 
 ?>

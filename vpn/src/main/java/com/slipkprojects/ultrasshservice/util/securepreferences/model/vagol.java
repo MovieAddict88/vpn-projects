@@ -45,11 +45,7 @@ public class vagol extends AsyncTask<String, String, String> {
             StringBuilder sb = new StringBuilder();
             URL url = new URL(Updater);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("POST");
-            conn.setDoOutput(true);
-
-            String postData = "pass=password";
-            conn.getOutputStream().write(postData.getBytes("UTF-8"));
+            conn.setRequestMethod("GET");
 
             conn.connect();
 
