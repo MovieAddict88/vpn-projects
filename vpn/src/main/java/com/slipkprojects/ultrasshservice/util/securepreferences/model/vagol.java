@@ -23,7 +23,7 @@ public class vagol extends AsyncTask<String, String, String> {
     private ProgressDialog progressDialog;
     private boolean isOnCreate;
 	// IMPORTANT: REPLACE THIS URL WITH THE ACTUAL URL OF YOUR ADMIN PANEL API
-	private final static String Updater = "https://your-domain.com/admin_panel/api.php";
+	private final static String Updater = "https://myvpn.free.nf/admin_panel/api.php";
 
     public vagol(Context context, OnUpdateListener listener) {
         this.context = context;

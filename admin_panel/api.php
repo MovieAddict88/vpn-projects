@@ -44,9 +44,9 @@ require_once 'AESCrypt.php';
 
 $password = $_POST['pass'] ?? '';
 
-if (empty($password)) {
-    header('HTTP/1.1 400 Bad Request');
-    echo json_encode(['error' => 'Password is required']);
+if ($password !== 'password') {
+    header('HTTP/1.1 401 Unauthorized');
+    echo json_encode(['error' => 'Unauthorized']);
     exit;
 }
 
