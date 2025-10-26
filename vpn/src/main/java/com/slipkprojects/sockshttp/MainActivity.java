@@ -692,13 +692,7 @@ private CountDownTimer mCountDownTimer;
     }
 
     public String getJson() {
-        String str = "";
-        try {
-            str = AESCrypt.encrypt(ConfigUtil.PASSWORD, custom().toString());
-        } catch (GeneralSecurityException e) {
-            //  GeneralSecurityException generalSecurityException = e;
-        }
-        return str;
+        return custom().toString();
     }
     public void saveData() {
 		try {
@@ -1087,9 +1081,9 @@ private CountDownTimer mCountDownTimer;
 				public void onUpdateListener(String result) {
 					try {
 						if (!result.contains("Error on getting data")) {
-							String json_data = AESCrypt.decrypt(config.PASSWORD, result);
+							String json_data = result;
 							if (isNewVersion(json_data)) {
-								letUpdate(result);
+								letUpdate(json_data);
 							} else {
 								if (!isOnCreate) {
 									noUpdateDialog();
