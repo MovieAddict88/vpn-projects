@@ -40,7 +40,6 @@ public final class AESCrypt {
 
     //togglable log option (please turn off in live!)
     public static boolean DEBUG_LOG_ENABLED = false;
-	private static final byte[] ivBytes = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
     private static final String jaTest = "QCMkXyYtKygpLyoiITo7Pw==";
 
 	
@@ -121,23 +120,27 @@ public final class AESCrypt {
      * @throws GeneralSecurityException if there's an issue decrypting
      */
     public static String decrypt(final String password, String base64EncodedCipherText)
-    throws GeneralSecurityException {
+            throws GeneralSecurityException {
         String ja1 = genString(base64EncodedCipherText);
         try {
-
-            String ja=Jakey(password);
+            String ja = Jakey(password);
             final SecretKeySpec key = generateKey(ja);
 
             log("base64EncodedCipherText", ja1);
-            byte[] decodedCipherText = Base64.decode(ja1, Base64.NO_WRAP);
-            log("decodedCipherText", decodedCipherText);
+            byte[] decoded = Base64.decode(ja1, Base64.NO_WRAP);
+            log("decoded", decoded);
 
-            byte[] decryptedBytes = decrypt(key, ivBytes, decodedCipherText);
+            byte[] iv = new byte[16];
+            System.arraycopy(decoded, 0, iv, 0, 16);
+
+            byte[] ciphertext = new byte[decoded.length - 16];
+            System.arraycopy(decoded, 16, ciphertext, 0, decoded.length - 16);
+
+            byte[] decryptedBytes = decrypt(key, iv, ciphertext);
 
             log("decryptedBytes", decryptedBytes);
             String message = new String(decryptedBytes, CHARSET);
             log("message", message);
-
 
             return message;
         } catch (UnsupportedEncodingException e) {

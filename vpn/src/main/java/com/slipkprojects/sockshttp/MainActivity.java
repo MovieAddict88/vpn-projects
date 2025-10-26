@@ -1026,36 +1026,41 @@ private CountDownTimer mCountDownTimer;
 		}
 	}
 	private void loadServer() {
-		try {
-			if (serverList.size() > 0) {
-				serverList.clear();
-				serverAdapter.notifyDataSetChanged();
-			}
-			for (int i = 0; i < config.getServersArray().length(); i++) {
-				JSONObject obj = config.getServersArray().getJSONObject(i);
-				serverList.add(obj);
-				serverAdapter.notifyDataSetChanged();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+    try {
+        if (serverList.size() > 0) {
+            serverList.clear();
+            serverAdapter.notifyDataSetChanged();
+        }
+        JSONArray servers = config.getServersArray();
+        if (servers != null) {
+            for (int i = 0; i < servers.length(); i++) {
+                JSONObject obj = servers.getJSONObject(i);
+                serverList.add(obj);
+                serverAdapter.notifyDataSetChanged();
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
 	private void loadNetworks() {
-		try {
-			if (payloadList.size() > 0) {
-				payloadList.clear();
-				payloadAdapter.notifyDataSetChanged();
-			}
-			for (int i = 0; i < config.getNetworksArray().length(); i++) {
-				JSONObject obj = config.getNetworksArray().getJSONObject(i);
-				payloadList.add(obj);
-				payloadAdapter.notifyDataSetChanged();
-
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+    try {
+        if (payloadList.size() > 0) {
+            payloadList.clear();
+            payloadAdapter.notifyDataSetChanged();
+        }
+        JSONArray networks = config.getNetworksArray();
+        if (networks != null) {
+            for (int i = 0; i < networks.length(); i++) {
+                JSONObject obj = networks.getJSONObject(i);
+                payloadList.add(obj);
+                payloadAdapter.notifyDataSetChanged();
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
     public void offlineUpdate() {
 		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
 		intent.setType("*/*");
