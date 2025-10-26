@@ -22,6 +22,7 @@ public class vagol extends AsyncTask<String, String, String> {
     private OnUpdateListener listener;
     private ProgressDialog progressDialog;
     private boolean isOnCreate;
+	// IMPORTANT: REPLACE THIS URL WITH THE ACTUAL URL OF YOUR ADMIN PANEL API
 	private final static String Updater = "https://your-domain.com/admin_panel/api.php";
 
     public vagol(Context context, OnUpdateListener listener) {

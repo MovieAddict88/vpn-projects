@@ -33,58 +33,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <h2>Edit Server</h2>
-        <form action="server_edit.php?id=<?php echo $id; ?>" method="post">
+        <form action="server_edit.php?id=<?php echo htmlspecialchars($id); ?>" method="post">
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" name="Name" class="form-control" value="<?php echo $server['Name']; ?>">
+                <input type="text" name="Name" class="form-control" value="<?php echo htmlspecialchars($server['Name']); ?>">
             </div>
             <div class="form-group">
                 <label>FLAG</label>
-                <input type="text" name="FLAG" class="form-control" value="<?php echo $server['FLAG']; ?>">
+                <input type="text" name="FLAG" class="form-control" value="<?php echo htmlspecialchars($server['FLAG']); ?>">
             </div>
             <div class="form-group">
                 <label>Server IP</label>
-                <input type="text" name="ServerIP" class="form-control" value="<?php echo $server['ServerIP']; ?>">
+                <input type="text" name="ServerIP" class="form-control" value="<?php echo htmlspecialchars($server['ServerIP']); ?>">
             </div>
             <div class="form-group">
                 <label>Server Port</label>
-                <input type="text" name="ServerPort" class="form-control" value="<?php echo $server['ServerPort']; ?>">
+                <input type="text" name="ServerPort" class="form-control" value="<?php echo htmlspecialchars($server['ServerPort']); ?>">
             </div>
             <div class="form-group">
                 <label>SSL Port</label>
-                <input type="text" name="SSLPort" class="form-control" value="<?php echo $server['SSLPort']; ?>">
+                <input type="text" name="SSLPort" class="form-control" value="<?php echo htmlspecialchars($server['SSLPort']); ?>">
             </div>
             <div class="form-group">
                 <label>Proxy Port</label>
-                <input type="text" name="ProxyPort" class="form-control" value="<?php echo $server['ProxyPort']; ?>">
+                <input type="text" name="ProxyPort" class="form-control" value="<?php echo htmlspecialchars($server['ProxyPort']); ?>">
             </div>
             <div class="form-group">
                 <label>Server User</label>
-                <input type="text" name="ServerUser" class="form-control" value="<?php echo $server['ServerUser']; ?>">
+                <input type="text" name="ServerUser" class="form-control" value="<?php echo htmlspecialchars($server['ServerUser']); ?>">
             </div>
             <div class="form-group">
                 <label>Server Pass</label>
-                <input type="text" name="ServerPass" class="form-control" value="<?php echo $server['ServerPass']; ?>">
+                <input type="text" name="ServerPass" class="form-control" value="<?php echo htmlspecialchars($server['ServerPass']); ?>">
             </div>
             <div class="form-group">
                 <label>Sfrep</label>
-                <textarea name="Sfrep" class="form-control"><?php echo $server['Sfrep']; ?></textarea>
+                <textarea name="Sfrep" class="form-control"><?php echo htmlspecialchars($server['Sfrep']); ?></textarea>
             </div>
             <div class="form-group">
                 <label>sInfo</label>
-                <textarea name="sInfo" class="form-control"><?php echo $server['sInfo']; ?></textarea>
+                <textarea name="sInfo" class="form-control"><?php echo htmlspecialchars($server['sInfo']); ?></textarea>
             </div>
             <div class="form-group">
                 <label>Slowchave</label>
-                <textarea name="Slowchave" class="form-control"><?php echo $server['Slowchave']; ?></textarea>
+                <textarea name="Slowchave" class="form-control"><?php echo htmlspecialchars($server['Slowchave']); ?></textarea>
             </div>
             <div class="form-group">
                 <label>Nameserver</label>
-                <input type="text" name="Nameserver" class="form-control" value="<?php echo $server['Nameserver']; ?>">
+                <input type="text" name="Nameserver" class="form-control" value="<?php echo htmlspecialchars($server['Nameserver']); ?>">
             </div>
             <div class="form-group">
                 <label>Server Message</label>
-                <textarea name="servermessage" class="form-control"><?php echo $server['servermessage']; ?></textarea>
+                <textarea name="servermessage" class="form-control"><?php echo htmlspecialchars($server['servermessage']); ?></textarea>
             </div>
             <input type="submit" class="btn btn-primary" value="Submit">
             <a href="servers.php" class="btn btn-secondary">Cancel</a>

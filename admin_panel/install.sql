@@ -55,5 +55,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- It is strongly recommended to change this password after installation.
+-- The default password is "password". It is strongly recommended to change this after installation.
 INSERT INTO `users` (`username`, `password`) VALUES
-('admin', '$2y$10$E.qJ/8n7gY9/l..d/7.F.u1.M/8..c.4j/s.1.L/p.9.m.X/'); -- password is "ChangeMeASAP!"
+('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');

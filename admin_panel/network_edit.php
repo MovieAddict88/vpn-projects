@@ -33,62 +33,62 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <h2>Edit Network</h2>
-        <form action="network_edit.php?id=<?php echo $id; ?>" method="post">
+        <form action="network_edit.php?id=<?php echo htmlspecialchars($id); ?>" method="post">
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" name="Name" class="form-control" value="<?php echo $network['Name']; ?>">
+                <input type="text" name="Name" class="form-control" value="<?php echo htmlspecialchars($network['Name']); ?>">
             </div>
             <div class="form-group">
                 <label>Payload</label>
-                <textarea name="Payload" class="form-control"><?php echo $network['Payload']; ?></textarea>
+                <textarea name="Payload" class="form-control"><?php echo htmlspecialchars($network['Payload']); ?></textarea>
             </div>
             <div class="form-group">
                 <label>SNI</label>
-                <input type="text" name="SNI" class="form-control" value="<?php echo $network['SNI']; ?>">
+                <input type="text" name="SNI" class="form-control" value="<?php echo htmlspecialchars($network['SNI']); ?>">
             </div>
             <div class="form-group">
                 <label>pInfo</label>
-                <textarea name="pInfo" class="form-control"><?php echo $network['pInfo']; ?></textarea>
+                <textarea name="pInfo" class="form-control"><?php echo htmlspecialchars($network['pInfo']); ?></textarea>
             </div>
             <div class="form-group">
                 <label>Slowdns</label>
-                <input type="text" name="Slowdns" class="form-control" value="<?php echo $network['Slowdns']; ?>">
+                <input type="text" name="Slowdns" class="form-control" value="<?php echo htmlspecialchars($network['Slowdns']); ?>">
             </div>
             <div class="form-group">
                 <label>WebProxy</label>
-                <input type="text" name="WebProxy" class="form-control" value="<?php echo $network['WebProxy']; ?>">
+                <input type="text" name="WebProxy" class="form-control" value="<?php echo htmlspecialchars($network['WebProxy']); ?>">
             </div>
             <div class="form-group">
                 <label>WebPort</label>
-                <input type="text" name="WebPort" class="form-control" value="<?php echo $network['WebPort']; ?>">
+                <input type="text" name="WebPort" class="form-control" value="<?php echo htmlspecialchars($network['WebPort']); ?>">
             </div>
             <div class="form-group">
                 <label>isSSL</label>
-                <input type="text" name="isSSL" class="form-control" value="<?php echo $network['isSSL']; ?>">
+                <input type="text" name="isSSL" class="form-control" value="<?php echo htmlspecialchars($network['isSSL']); ?>">
             </div>
             <div class="form-group">
                 <label>isPayloadSSL</label>
-                <input type="text" name="isPayloadSSL" class="form-control" value="<?php echo $network['isPayloadSSL']; ?>">
+                <input type="text" name="isPayloadSSL" class="form-control" value="<?php echo htmlspecialchars($network['isPayloadSSL']); ?>">
             </div>
             <div class="form-group">
                 <label>isSlow</label>
-                <input type="text" name="isSlow" class="form-control" value="<?php echo $network['isSlow']; ?>">
+                <input type="text" name="isSlow" class="form-control" value="<?php echo htmlspecialchars($network['isSlow']); ?>">
             </div>
             <div class="form-group">
                 <label>isHatok</label>
-                <input type="text" name="isHatok" class="form-control" value="<?php echo $network['isHatok']; ?>">
+                <input type="text" name="isHatok" class="form-control" value="<?php echo htmlspecialchars($network['isHatok']); ?>">
             </div>
             <div class="form-group">
                 <label>isInject</label>
-                <input type="text" name="isInject" class="form-control" value="<?php echo $network['isInject']; ?>">
+                <input type="text" name="isInject" class="form-control" value="<?php echo htmlspecialchars($network['isInject']); ?>">
             </div>
             <div class="form-group">
                 <label>isDirect</label>
-                <input type="text" name="isDirect" class="form-control" value="<?php echo $network['isDirect']; ?>">
+                <input type="text" name="isDirect" class="form-control" value="<?php echo htmlspecialchars($network['isDirect']); ?>">
             </div>
             <div class="form-group">
                 <label>isWeb</label>
-                <input type="text" name="isWeb" class="form-control" value="<?php echo $network['isWeb']; ?>">
+                <input type="text" name="isWeb" class="form-control" value="<?php echo htmlspecialchars($network['isWeb']); ?>">
             </div>
             <input type="submit" class="btn btn-primary" value="Submit">
             <a href="networks.php" class="btn btn-secondary">Cancel</a>
