@@ -22,7 +22,8 @@ import com.slipkprojects.ultrasshservice.util.securepreferences.model.SecurityCo
 public class ConfigUtil {
 
     Context context;
-    public static final String PASSWORD = new String(new byte[]{97,110,103,101,108,111,});
+    // Matches php-admin/src/Config.php ENCRYPTION_PASSWORD
+    public static final String PASSWORD = "angelo";
 
     public ConfigUtil(Context context) {
         this.context = context;
