@@ -12,6 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -79,7 +80,17 @@ public final class AESCrypt {
             String ja=Jakey(password);
             SecretKeySpec generateKey = generateKey(ja);
             log("message", message);
-            String encodeToString = Base64.encodeToString(encrypt(generateKey, ivBytes, message.getBytes(CHARSET)), 2);
+
+            byte[] ivBytes = new byte[16];
+            new SecureRandom().nextBytes(ivBytes);
+
+            byte[] ciphertext = encrypt(generateKey, ivBytes, message.getBytes(CHARSET));
+
+            byte[] combined = new byte[ivBytes.length + ciphertext.length];
+            System.arraycopy(ivBytes, 0, combined, 0, ivBytes.length);
+            System.arraycopy(ciphertext, 0, combined, ivBytes.length, ciphertext.length);
+
+            String encodeToString = Base64.encodeToString(combined, Base64.NO_WRAP);
             log("Base64.NO_WRAP", encodeToString);
             return Jacodes(encodeToString);
         } catch (UnsupportedEncodingException e) {
